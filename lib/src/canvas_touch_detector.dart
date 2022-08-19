@@ -116,20 +116,6 @@ class _CanvasTouchDetectorState extends State<CanvasTouchDetector> {
                   touchController.add(
                       Gesture(GestureType.onLongPressMoveUpdate, tapDetail));
                 },
-          onScaleStart:
-              !widget.gesturesToOverride.contains(GestureType.onScaleStart)
-                  ? null
-                  : (tapDetail) {
-                      touchController
-                          .add(Gesture(GestureType.onScaleStart, tapDetail));
-                    },
-          onScaleUpdate:
-              !widget.gesturesToOverride.contains(GestureType.onScaleUpdate)
-                  ? null
-                  : (tapDetail) {
-                      touchController
-                          .add(Gesture(GestureType.onScaleUpdate, tapDetail));
-                    },
           onForcePressStart: !widget.gesturesToOverride
                   .contains(GestureType.onForcePressStart)
               ? null
